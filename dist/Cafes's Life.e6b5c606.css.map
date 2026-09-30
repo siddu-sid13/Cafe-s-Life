@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;AAGA","sources":["App.css"],"sourcesContent":[":root{\r\n    --primary-font : 'Playfair Display',sans-serif;\r\n}\r\nbody{\r\n    font-family: var(--primary-font);\r\n}"],"names":[],"version":3,"file":"Cafes's Life.e6b5c606.css.map","sourceRoot":"/__parcel_source_root/"}

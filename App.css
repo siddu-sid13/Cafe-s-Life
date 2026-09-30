@@ -1,6 +1,152 @@
 :root{
     --primary-font : 'Playfair Display',sans-serif;
+    --secondary-font: "Poppins",sans-serif;
+    --primary-color: #4E0000;
+    --text-in-black : #000000;
+    --text-in-white: #FFFFFF;
 }
 body{
+    font-family: var(--secondary-font);
+    color: var(--text-in-white);
+    margin: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav > img{
+    width: 180px;
+}
+.hero-section{
+    background-image: url('assets/hero-section-img.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 25px 40px;
+    margin-bottom: 72px;
+}
+.links-to-pages{
+    display: flex;
+    gap: 50px;
+   
+    list-style: none;
+}
+.links-to-pages a{
+    text-decoration: none;
+    color: var(--text-in-white);
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+.links-to-pages li:hover{
+    text-decoration: underline white;
+}
+.book-table-btn a{
+    color: var(--text-in-black);
+    padding: 11px 24px;
+    background-color: #E7D6C2;
+    font-weight: 600;
+    border-radius: 25px;
+}
+li:nth-child(6):hover{
+    text-decoration: none;
+}
+
+
+
+.hero-text{
+    max-width: 564px;
+    margin-top: 100px;
+    padding-left: 100px;
+
+}
+.hero-text p:nth-child(1){
+    font-weight: 300;
+    font-size: 15px;
+}
+.hero-text h1{
     font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 3rem;
+
+    margin-top: 0px;
+}
+.hero-text p:nth-child(3){
+    font-weight: 200;
+    font-size: 24px;
+}
+
+
+.hero-btns-container{
+    display: flex;
+    gap: 50px;
+    margin-top: 6rem;
+    
+}
+.hero-btn {
+    
+    padding: 11px 24px;
+    background-color: #E7D6C2;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+.hero-btn{
+    text-decoration: none;
+    color: var(--text-in-black);
+}
+.explore-events-btn,.view-menu-btn{
+    transition: background-color 200ms ease-out;
+}
+
+.explore-events-btn:hover{
+    color: var(--text-in-white);
+    background-color: transparent;
+    border: 1px solid white;
+     
+}
+
+.view-menu-btn{
+    color: var(--text-in-white);
+    background-color: transparent;
+    border: 1px solid white;
+}
+.view-menu-btn:hover{
+    background-color: #E7D6C2;
+    color: var(--text-in-black);
+}
+
+.component-btn-section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+.component-btn{
+    color: #000000;
+    border: 2px solid #4e0000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.item{
+    display: flex;
+    max-width: 250px;
+    min-height: 344px;
+    background-image: url('assets/Chocolate-Ice-Cream-Crepe.svg');
+    background-repeat: no-repeat;
+    font-family: var(--secondary-font);
+}
+
+
+.item-details{
+    align-self: flex-end;
+}
+.item-name{
+    font-size: 15px;
+}
+.item-description{
+    font-size: 12px;
 }
