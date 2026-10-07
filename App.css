@@ -51,6 +51,37 @@ nav > img{
 li:nth-child(6):hover{
     text-decoration: none;
 }
+.sidebar {
+    z-index: 999;
+    backdrop-filter: blur(11px);
+    background-color: #fff0;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 0 10px #0003;
+    gap: 34px;
+    padding-top: 50px;
+}
+
+.close-icon{
+    width: 30px;
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
 
 
 
@@ -131,22 +162,171 @@ li:nth-child(6):hover{
     font-weight: 500;
 }
 
-.item{
+/* .item{
     display: flex;
-    max-width: 250px;
+    max-width: 234px;
     min-height: 344px;
     background-image: url('assets/Chocolate-Ice-Cream-Crepe.svg');
     background-repeat: no-repeat;
     font-family: var(--secondary-font);
-}
+    margin-bottom: 100px;
+} */
 
+
+/* .item-details{
+    align-self: flex-end;
+    
+} */
 
 .item-details{
-    align-self: flex-end;
+    padding: 10px;
 }
-.item-name{
+.item-name-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.item-name {
+    margin: 0;
     font-size: 15px;
 }
-.item-description{
+
+.item-price-rating {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(78, 0, 0, 1);
+    padding: 8px;
+    border-radius: 5px;
+}
+.rating{
+    font-size: 11px;
+    font-weight: 100;
+    align-self: flex-start;
+}
+.item-price {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-price-rating img {
+    width: 11px;
+}
+
+.item-description {
+    margin: 8px 0 0;
     font-size: 12px;
+    font-weight: 200;
+}
+
+
+.item {
+    position: relative;
+    width: 234px;
+    height: 400px;
+
+    background-image: url('assets/Chocolate-Ice-Cream-Crepe.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    font-family: var(--secondary-font);
+}
+
+/* Blurred copy of the image at the bottom */
+.item::before {
+    content: "";
+    position: absolute;
+
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+
+    height: 32%;
+
+    background-image: url('assets/Chocolate-Ice-Cream-Crepe.svg');
+    background-size: cover;
+    background-position: center bottom;
+
+    filter: blur(12px);
+
+    z-index: 1;
+}
+
+/* Dark overlay */
+.item::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 32%;
+
+    background: rgba(0, 0, 0, 0.40);
+
+    z-index: 2;
+}
+
+/* Text */
+.item-details {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 32%;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    z-index: 3;
+}
+
+
+@media (max-width: 1050px){
+    .menu-icon{
+        display: block;
+    }
+    .links-to-pages-display-none{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .hero-text{
+        padding-left: 30px;
+    }
+}
+@media (max-width: 460px){
+    .hero-btns-container{
+        flex-direction: column;
+    }
+    
+    .explore-events-btn, .view-menu-btn{
+        max-width: 120px;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    .hero-text p:nth-child(3){
+        font-size: 16px;
+    }
+    .hero-text h1{
+        font-size: 2rem;
+    }
+    .hero-section{
+        padding: 25px;
+    }
 }
